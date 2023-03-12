@@ -1,0 +1,30 @@
+#maindiv {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "editor editor editor buttons"
+    "left left right right"
+}
+
+#topleft {
+    background-color: blue;
+    grid-area: editor;
+}
+
+#topright {
+    background-color: red;
+    grid-area: buttons;
+}
+
+#bottomleft {
+    background-color: lightblue;
+    grid-area: left;
+}
+
+#bottomright {
+    background-color: yellow;
+    grid-area: right;
+}

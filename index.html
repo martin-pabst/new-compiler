@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Compiler</title>
+    <link rel="preload" href="lib/monaco-editor/dev/vs/editor/editor.main.js" as="script">
+    <link rel="preload" href="lib/monaco-editor/dev/vs/editor/editor.main.nls.de.js" as="script">
+
+    <script src="lib/monaco-editor/dev/vs/loader.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="/src/Compilertest.ts"></script>
+  </head>
+  <body>
+    <div id="maindiv">
+      <div id="topleft"></div>
+      <div id="topright"></div>
+      <div id="bottomleft"></div>
+      <div id="bottomright"></div>
+    </div>
+  </body>
+</html>
