@@ -1,6 +1,6 @@
 import { TokenList, specialCharList, TokenType, Token, EscapeSequenceList, keywordList, TextPosition, TokenTypeReadable } from "./Token.js";
 import { ColorLexer } from "./ColorLexer.js";
-import { ColorHelper } from "../../runtimelibrary/graphics/ColorHelper.js";
+import { ColorHelper } from "./ColorHelper.js";
 
 enum LexerState {
     number, identifier, stringConstant, characterConstant, multilineComment, EndoflineComment
@@ -10,7 +10,7 @@ var endChar = "►"; // \u10000
 
 export type QuickFix = {
     title: string,
-    editsProvider: (uri: monaco.Uri) => monaco.languages.WorkspaceTextEdit[]
+    editsProvider: (uri: monaco.Uri) => monaco.languages.IWorkspaceTextEdit[]
 }
 
 export type ErrorLevel = "info" | "error" | "warning";
@@ -20,6 +20,13 @@ export type Error = {
     text: string,
     quickFix?: QuickFix,
     level: ErrorLevel
+}
+
+export type LexerOutput = { 
+    tokens: TokenList, 
+    errors: Error[], 
+    bracketError: string, 
+    colorInformation: monaco.languages.IColorInformation[] 
 }
 
 export class Lexer {
@@ -64,7 +71,7 @@ export class Lexer {
         return Lexer.instance.lex(input).tokens;
     }    
 
-    lex(input: string): { tokens: TokenList, errors: Error[], bracketError: string, colorInformation: monaco.languages.IColorInformation[] } {
+    lex(input: string): LexerOutput {
 
         this.input = input.replace("\uc2a0", " ");
         this.input = input.replace("\u00a0", " ");
