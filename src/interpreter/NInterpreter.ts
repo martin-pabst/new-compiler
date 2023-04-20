@@ -1,17 +1,5 @@
-import { EventManager } from "src/client/tools/EventManager.js";
-import { Module, ModuleStore } from "../../compiler/parser/Module.js";
-import { TextPositionWithModule } from "../../compiler/types/Types.js";
-import { InputManager } from "../../interpreter/InputManager.js";
-import { PrintManager } from "../../main/gui/PrintManager.js";
-import { ProgramControlButtons } from "../../main/gui/ProgramControlButtons.js";
-import { MainBase } from "../../main/MainBase.js";
-import { GNGEreignisbehandlungHelper as GNGHelper } from "../../runtimelibrary/gng/GNGEreignisbehandlung.js";
-import { ProcessingHelper } from "../../runtimelibrary/graphics/Processing.js";
-import { WorldHelper } from "../../runtimelibrary/graphics/World.js";
-import { TimerClass } from "../../runtimelibrary/Timer.js";
-import { GamepadTool } from "../../tools/GamepadTool.js";
-import { KeyboardTool } from "../../tools/KeyboardTool.js";
-import { NPrimitiveTypeManager } from "../types/NPrimitiveTypeManager.js";
+import { NPrimitiveTypeManager } from "../compiler/java/basictypes/NPrimitiveTypeManager.js";
+import { Module, ModuleStore } from "../compiler/java/parser/Module.js";
 import { NLoadController } from "./NLoadController.js";
 import { NThreadPool, NThreadPoolLstate } from "./NThreadPool.js";
 

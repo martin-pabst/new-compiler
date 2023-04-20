@@ -1,14 +1,13 @@
-import { Error, ErrorLevel, QuickFix } from "src/client/compiler/lexer/Lexer.js";
-import { TextPosition, TokenType, TokenTypeReadable } from "src/client/compiler/lexer/Token.js";
-import { ASTNode, BinaryOpNode, ConstantNode, TermNode, UnaryOpNode } from "src/client/compiler/parser/AST.js";
-import { Module, ModuleStore } from "src/client/compiler/parser/Module.js";
-import { Heap } from "src/client/compiler/types/Types.js";
-import { NClass, NClassLike } from "../types/NClass.js";
-import { NPrimitiveType } from "../types/NPrimitiveType.js";
-import { NType } from "../types/NType.js";
-import { NPrimitiveTypeManager } from "../types/NPrimitiveTypeManager.js";
+import { NProgram, NBlock, NFragment } from "../../NProgram.js";
+import { NClassLike } from "../basictypes/NClass.js";
+import { NPrimitiveType } from "../basictypes/NPrimitiveType.js";
+import { NPrimitiveTypeManager } from "../basictypes/NPrimitiveTypeManager.js";
+import { NType } from "../basictypes/NType.js";
+import { ErrorLevel, QuickFix } from "../lexer/Lexer.js";
+import { TokenType, TextPosition, TokenTypeReadable } from "../lexer/Token.js";
+import { ASTNode, UnaryOpNode, ConstantNode, BinaryOpNode } from "../parser/AST.js";
+import { ModuleStore, Module } from "../parser/Module.js";
 import { CodeBuilder } from "./NCodeBuilder.js";
-import { NBlock, NFragment, NProgram } from "./NProgram.js";
 import { NSymbolTable } from "./NSymbolTable.js";
 import { NTypeResolver } from "./NTypeResolver.js";
 

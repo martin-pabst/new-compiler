@@ -1,10 +1,10 @@
-import { TokenType } from "src/client/compiler/lexer/Token.js";
-import { ConstantNode } from "src/client/compiler/parser/AST.js";
 import { VoidType, NullType, NIntPrimitiveType, NLongPrimitiveType, NFloatPrimitiveType, NDoublePrimitiveType, NBooleanPrimitiveType, NCharPrimitiveType } from "./NPrimitiveType.js";
 import { NType } from "./NType.js";
-import { NObjectType } from "../runtime/NObjectType.js";
 import { NStringType } from "./NStringType.js";
-import { NBooleanType, NCharacterType, NDoubleType, NFloatType, NIntegerType, NLongType } from "../runtime/NBoxedTypes.js";
+import { TokenType } from "../lexer/Token.js";
+import { ConstantNode } from "../parser/AST.js";
+import { NObjectType } from "./NObjectType.js";
+import { NIntegerType, NLongType, NFloatType, NDoubleType, NBooleanType, NCharacterType } from "./NBoxedTypes.js";
 
 export class NPrimitiveTypeManager {
     void: VoidType = new VoidType();

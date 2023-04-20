@@ -1,4 +1,4 @@
-import { TokenType } from "src/client/compiler/lexer/Token.js";
+import { TokenType } from "../lexer/Token.js";
 import { NExpression, NType } from "./NType.js";
 
 export class NArrayType extends NType {

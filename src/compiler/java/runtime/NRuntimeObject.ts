@@ -1,7 +1,5 @@
-import { Klass } from "../compiler/types/Class.js";
-import { NClass } from "./types/NClass.js";
-import { NProgram } from "./compiler/NProgram.js";
-import { NThread } from "./interpreter/NThreadPool.js";
+import { NThread } from "../../../interpreter/NThreadPool.js";
+import { NClass } from "../basictypes/NClass.js";
 
 
 export abstract class NRuntimeObject {
@@ -29,12 +27,10 @@ export abstract class NRuntimeObject {
 
 export class NStaticClassObject {
     __a: any = [];              // Attribute values
-    __initialValues: any[] = [];  // initial attribute values
     __class: NClass;            // reference to class
 
     constructor(klass: NClass, initialAttributeValues: any[]){
         this.__class = klass;
-        this.__initialValues = initialAttributeValues;
         this.__a = initialAttributeValues.slice();
     }
 

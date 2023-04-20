@@ -1,5 +1,5 @@
-import { NThread } from "../interpreter/NThreadPool.js";
-import { NRuntimeObject } from "../NRuntimeObject.js";
+import { NThread } from "../../../interpreter/NThreadPool.js";
+import { NRuntimeObject } from "../runtime/NRuntimeObject.js";
 
 export class NThrowable extends NRuntimeObject {
 

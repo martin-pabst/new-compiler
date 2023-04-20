@@ -1,6 +1,4 @@
-import { TokenType } from "src/client/compiler/lexer/Token.js";
-import { TextPositionWithModule, UsagePositions } from "src/client/compiler/types/Types.js";
-import { NProgram } from "../compiler/NProgram.js";
+import { TokenType } from "../lexer/Token.js";
 
 
 export type NExpression = {

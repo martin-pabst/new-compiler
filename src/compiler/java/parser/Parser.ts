@@ -1,11 +1,7 @@
-import { Error, QuickFix, ErrorLevel } from "../lexer/Lexer.js";
-import { TextPosition, Token, TokenList, TokenType, TokenTypeReadable } from "../lexer/Token.js";
-import { Visibility, Klass } from "../types/Class.js";
-import { ArrayInitializationNode, ASTNode, AttributeDeclarationNode, MethodDeclarationNode, NewArrayNode, ParameterNode, TermNode, TypeNode, EnumValueNode, SwitchNode, SwitchCaseNode, ConstantNode, BracketsNode, ScopeNode, TypeParameterNode, LocalVariableDeclarationNode } from "./AST.js";
+import { ErrorLevel, QuickFix } from "../lexer/Lexer.js";
+import { TokenType, TokenList, Token, TextPosition, TokenTypeReadable } from "../lexer/Token.js";
+import { ASTNode, TypeNode, TermNode, ScopeNode, SwitchNode, SwitchCaseNode, ConstantNode, BracketsNode, NewArrayNode, ArrayInitializationNode, LocalVariableDeclarationNode, TypeParameterNode, EnumValueNode, MethodDeclarationNode, AttributeDeclarationNode, ParameterNode } from "./AST.js";
 import { Module } from "./Module.js";
-import { stringPrimitiveType, intPrimitiveType, charPrimitiveType, TokenTypeToDataTypeMap, voidPrimitiveType } from "../types/PrimitiveTypes.js";
-import { Enum } from "../types/Enum.js";
-import { PrimitiveType, Type } from "../types/Types.js";
 
 type ASTNodes = ASTNode[];
 

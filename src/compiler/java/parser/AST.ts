@@ -1,12 +1,9 @@
+import { NMethodInfo, NAttributeInfo } from "../basictypes/NAttributeMethod.js";
+import { NInterface, NClass } from "../basictypes/NClass.js";
+import { NEnum } from "../basictypes/NEnum.js";
+import { NType } from "../basictypes/NType.js";
+import { NVisibility } from "../basictypes/NVisibility.js";
 import { TokenType, TextPosition, Token } from "../lexer/Token.js";
-import { Method, Type, Parameterlist, Attribute, Variable } from "../types/Types.js";
-import { Visibility, Klass, Interface } from "../types/Class.js";
-import { Enum } from "../types/Enum.js";
-import { NClass, NInterface } from "../../newcompiler/types/NClass.js";
-import { NEnum } from "../../newcompiler/types/NEnum.js";
-import { NAttributeInfo, NMethodInfo } from "../../newcompiler/types/NAttributeMethod.js";
-import { NVisibility } from "../../newcompiler/types/NVisibility.js";
-import { NType } from "src/client/newcompiler/types/NType.js";
 
 
 export type ASTNode = 

@@ -1,10 +1,10 @@
-import { ModuleStore, Module } from "src/client/compiler/parser/Module.js";
-import { TextPositionWithModule } from "src/client/compiler/types/Types.js";
-import { NProgram, NStep } from "../compiler/NProgram.js";
-import { NRuntimeObject, NStaticClassObject } from "../NRuntimeObject.js";
-import { NMethodInfo } from "../types/NAttributeMethod.js";
-import { NClass } from "../types/NClass.js";
-import { NInterpreter } from "./NInterpreter.js";
+import { NProgram, NStep } from "../compiler/NProgram.js"
+import { NMethodInfo } from "../compiler/java/basictypes/NAttributeMethod.js"
+import { NClass } from "../compiler/java/basictypes/NClass.js"
+import { ModuleStore, Module } from "../compiler/java/parser/Module.js"
+import { NRuntimeObject, NStaticClassObject } from "../compiler/java/runtime/NRuntimeObject.js"
+import { NInterpreter } from "./NInterpreter.js"
+
 
 type NExceptionInfo = {
     types: string[],

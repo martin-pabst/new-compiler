@@ -1,27 +1,27 @@
-type AttributeInfo = {
+export type AttributeInfo = {
     identifier: string,
     type: string,
     index: number
 }
 
-type StaticAttributeInfo = {
+export type StaticAttributeInfo = {
     identifier: string,
     type: string
 }
 
-type ParameterInfo = {
+export type ParameterInfo = {
     identifier: string,
     type: string
 }
 
-type MethodInfo = {
+export type MethodInfo = {
     identifier: string,
     returnType: string | null,
     parameters: ParameterInfo[],
     isConstructor: boolean
 }
 
-type ClassInfo = {
+export type ClassInfo = {
     identifier: string,
     extends?: any,      // Prototype of extended class
     implements: string[],
@@ -34,7 +34,7 @@ type ClassInfo = {
  */
 export const AttInfoList = "__attributeInfoList__";
 export const AttDefaultValueList = "__attributeDefaultValueList__";
-export const ClassInfo = "__classInfo__";
+export const ClassInfoIdentifier = "__classInfo__";
 export const StaticAttributeInfoList = "__staticAttributeInfoList__";
 export const MethodInfoList = "__methodInfoList__";
 
@@ -45,6 +45,11 @@ const Implements = "__implements__";
  */
 export const AttArray = "__att__";
 
+
+
+/**
+ * List of all System types:
+ */
 export var SYSTEMTYPES: any[] = [];
 
 
@@ -74,9 +79,9 @@ function _classOrEnum(identifier: string | null = null, isAbstract: boolean = fa
     
         let baseClassPrototype = Object.getPrototypeOf(myPrototype);
     
-        myPrototype[ClassInfo] = {
+        myPrototype[ClassInfoIdentifier] = {
             identifier: id,
-            extends: baseClassPrototype[ClassInfo]?baseClassPrototype : null,
+            extends: baseClassPrototype[ClassInfoIdentifier]?baseClassPrototype : null,
             implements: myPrototype[Implements]?myPrototype[Implements] : [],
             isAbstract: isAbstract, 
             isEnum: isEnum

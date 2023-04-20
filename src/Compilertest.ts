@@ -20,6 +20,8 @@ export class Compilertest {
             automaticLayout: true,
         });
         this.makeButton();
+
+        this.testTypeAnnotations();
     }
 
 

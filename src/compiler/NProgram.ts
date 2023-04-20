@@ -1,9 +1,9 @@
-import { TextPosition, TokenType, TokenTypeReadable } from "../../compiler/lexer/Token.js";
-import { Module } from "../../compiler/parser/Module.js"
 import { NThread } from "../interpreter/NThreadPool.js";
-import { NClassLike } from "../types/NClass.js";
-import { NType } from "../types/NType.js";
-import { NSymbolTable } from "./NSymbolTable.js";
+import { NClassLike } from "./java/basictypes/NClass.js";
+import { NType } from "./java/basictypes/NType.js";
+import { NSymbolTable } from "./java/codebuilder/NSymbolTable.js";
+import { TextPosition, TokenType, TokenTypeReadable } from "./java/lexer/Token.js";
+import { Module } from "./java/parser/Module.js";
 
 
 export type NHelper = any;

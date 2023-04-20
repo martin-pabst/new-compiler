@@ -1,7 +1,4 @@
-import { NStep } from "./NProgram.js"
-
-
-
+import { NStep } from "../../NProgram.js";
 
 
 export class CodeBuilder {

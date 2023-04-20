@@ -1,15 +1,15 @@
-import { Lexer } from "src/client/compiler/lexer/Lexer.js";
-import { Token, TokenList, TokenType, TokenTypeReadable } from "src/client/compiler/lexer/Token.js";
-import { NRuntimeObject } from "../NRuntimeObject.js";
-import { NAttributeInfo, NMethodInfo, NVariable } from "../types/NAttributeMethod.js";
-import { NClass, NClassLike, NGenericParameter, NInterface } from "../types/NClass.js";
-import { } from "../types/NPrimitiveType.js";
-import { NExpression, NType } from "../types/NType.js";
-import { NVisibility, NVisibilityUtility } from "../types/NVisibility.js";
-import { NPrimitiveTypeManager } from "../types/NPrimitiveTypeManager.js";
-import { NLibrary } from "../runtime/NStandardLibrary.js";
-import { NArrayType } from "../types/NArray.js";
-import { NEnum } from "../types/NEnum.js";
+import { NArrayType } from "./basictypes/NArray.js";
+import { NAttributeInfo, NMethodInfo, NVariable } from "./basictypes/NAttributeMethod.js";
+import { NClassLike, NClass, NInterface, NGenericParameter } from "./basictypes/NClass.js";
+import { NEnum } from "./basictypes/NEnum.js";
+import { NPrimitiveTypeManager } from "./basictypes/NPrimitiveTypeManager.js";
+import { NType, NExpression } from "./basictypes/NType.js";
+import { NVisibility, NVisibilityUtility } from "./basictypes/NVisibility.js";
+import { Lexer } from "./lexer/Lexer.js";
+import { Token, TokenList, TokenType, TokenTypeReadable } from "./lexer/Token.js";
+import { NRuntimeObject } from "./runtime/NRuntimeObject.js";
+import { NLibrary } from "./runtime/NStandardLibrary.js";
+
 
 type NClassInfo = {
     class: NClassLike,

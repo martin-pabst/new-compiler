@@ -1,4 +1,4 @@
-import { TokenType } from "src/client/compiler/lexer/Token.js";
+import { TokenType } from "../lexer/Token.js";
 
 export enum NVisibility { public, protected, private };
 

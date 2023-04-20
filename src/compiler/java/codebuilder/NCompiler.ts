@@ -1,10 +1,8 @@
-import { Lexer } from "src/client/compiler/lexer/Lexer.js";
-import { ModuleStore } from "src/client/compiler/parser/Module.js";
-import { Parser } from "src/client/compiler/parser/Parser.js";
-import { MainEmbedded } from "src/client/embedded/MainEmbedded.js";
-import { MainBase } from "src/client/main/MainBase.js";
+
+import { Lexer } from "../lexer/Lexer.js";
+import { ModuleStore } from "../parser/Module.js";
+import { Parser } from "../parser/Parser.js";
 import { NLibrary } from "../runtime/NStandardLibrary.js";
-import { NPrimitiveTypeManager } from "../types/NPrimitiveTypeManager.js";
 import { NCodeGenerator } from "./NCodeGenerator.js";
 import { NTypeResolver } from "./NTypeResolver.js";
 

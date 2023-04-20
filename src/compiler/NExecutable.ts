@@ -1,6 +1,6 @@
-import { Module } from "src/client/compiler/parser/Module";
-import { Type } from "src/client/compiler/types/Types";
-import { NLibrary } from "../runtime/NStandardLibrary";
+import { Module } from "./java/parser/Module.js";
+import { NLibrary } from "./java/runtime/NStandardLibrary.js";
+
 
 export class NExecutable {
 

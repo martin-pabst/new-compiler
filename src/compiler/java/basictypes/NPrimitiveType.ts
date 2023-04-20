@@ -1,6 +1,4 @@
-import { Token, TokenType } from "src/client/compiler/lexer/Token.js";
-import { ConstantNode } from "src/client/compiler/parser/AST.js";
-import { NRuntimeObject } from "../NRuntimeObject.js";
+import { TokenType } from "../lexer/Token.js";
 import { NExpression, NType } from "./NType.js";
 
 

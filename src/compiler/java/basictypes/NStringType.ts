@@ -1,10 +1,9 @@
-import { TokenType } from "src/client/compiler/lexer/Token.js";
-import { NRuntimeObject } from "../NRuntimeObject.js";
 import { NMethodInfo, NParameterlist, NVariable } from "./NAttributeMethod.js";
 import { NClass } from "./NClass.js";
 import { NPrimitiveType } from "./NPrimitiveType.js";
 import { NExpression, NType } from "./NType.js";
 import { NPrimitiveTypeManager } from "./NPrimitiveTypeManager.js";
+import { TokenType } from "../lexer/Token.js";
 
 type MethodShorthand = {
     id: string,

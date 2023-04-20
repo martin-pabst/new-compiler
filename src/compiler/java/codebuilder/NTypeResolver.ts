@@ -1,15 +1,15 @@
-import { TextPosition, TokenType } from "src/client/compiler/lexer/Token.js";
-import { AttributeDeclarationNode, ClassDeclarationNode, EnumDeclarationNode, InterfaceDeclarationNode, MethodDeclarationNode, TypeNode } from "src/client/compiler/parser/AST.js";
-import { Module } from "src/client/compiler/parser/Module.js";
-import { TextPositionWithModule } from "src/client/compiler/types/Types.js";
+import { NArrayType } from "../basictypes/NArray.js";
+import { NMethodInfo, NVariable, NParameterlist, NAttributeInfo } from "../basictypes/NAttributeMethod.js";
+import { NClass, NInterface, NGenericParameter, NClassLike } from "../basictypes/NClass.js";
+import { NEnum } from "../basictypes/NEnum.js";
+import { NPrimitiveType } from "../basictypes/NPrimitiveType.js";
+import { NPrimitiveTypeManager } from "../basictypes/NPrimitiveTypeManager.js";
+import { NType } from "../basictypes/NType.js";
+import { TokenType, TextPosition } from "../lexer/Token.js";
+import { ClassDeclarationNode, InterfaceDeclarationNode, EnumDeclarationNode, TypeNode, MethodDeclarationNode, AttributeDeclarationNode } from "../parser/AST.js";
+import { Module } from "../parser/Module.js";
 import { NLibrary } from "../runtime/NStandardLibrary.js";
-import { NArrayType } from "../types/NArray.js";
-import { NAttributeInfo, NMethodInfo, NParameterlist, NVariable } from "../types/NAttributeMethod.js";
-import { NClass, NClassLike, NGenericParameter, NInterface } from "../types/NClass.js";
-import { NEnum } from "../types/NEnum.js";
-import { NPrimitiveType } from "../types/NPrimitiveType.js";
-import { NType } from "../types/NType.js";
-import { NPrimitiveTypeManager } from "../types/NPrimitiveTypeManager.js";
+
 
 /**
  * Pass between parser and code generator

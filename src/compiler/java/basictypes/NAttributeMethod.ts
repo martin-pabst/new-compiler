@@ -1,5 +1,4 @@
-import { UsagePositions, TextPositionWithModule } from "src/client/compiler/types/Types.js";
-import { NProgram } from "../compiler/NProgram.js";
+import { NProgram } from "../../NProgram.js";
 import { NType } from "./NType.js";
 import { NVisibility } from "./NVisibility.js";
 

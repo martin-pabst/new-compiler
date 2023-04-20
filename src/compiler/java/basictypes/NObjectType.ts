@@ -1,10 +1,8 @@
-import { TokenType } from "src/client/compiler/lexer/Token.js";
-import { NRuntimeObject } from "../NRuntimeObject.js";
-import { NMethodInfo, NParameterlist, NVariable } from "../types/NAttributeMethod.js";
-import { NClass } from "../types/NClass.js";
-import { NPrimitiveType } from "../types/NPrimitiveType.js";
-import { NExpression, NType } from "../types/NType.js";
-import { NPrimitiveTypeManager } from "../types/NPrimitiveTypeManager.js";
+import { TokenType } from "../lexer/Token.js";
+import { NMethodInfo, NParameterlist } from "./NAttributeMethod.js";
+import { NClass } from "./NClass.js";
+import { NPrimitiveTypeManager } from "./NPrimitiveTypeManager.js";
+import { NType, NExpression } from "./NType.js";
 
 
 

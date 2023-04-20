@@ -1,8 +1,21 @@
-import { AttDefaultValueList, _attribute as _attribute, _implements, _class as classDef, _method, _staticAttribute, _constructor, _class, _enum } from "./Decorators.js";
+import { AttDefaultValueList, _attribute as _attribute, _implements, _class as classDef, _method, _staticAttribute, _constructor, _class, _enum, AttributeInfo, ClassInfo, StaticAttributeInfo, MethodInfo } from "./Decorators.js";
+
+// export const AttInfoList = "__attributeInfoList__";
+// export const AttDefaultValueList = "__attributeDefaultValueList__";
+// export const ClassInfo = "__classInfo__";
+// export const StaticAttributeInfoList = "__staticAttributeInfoList__";
+// export const MethodInfoList = "__methodInfoList__";
+
+export type PrimitiveJavascriptType = string | number | boolean | null;
 
 @classDef("Object")
 export class ObjectClass {
     __att__: any[] = ((<any>this)[AttDefaultValueList]).slice();
+    declare __attributeInfoList__: AttributeInfo[];
+    declare __methodInfoList__: MethodInfo[];
+    declare __attributeDefaultValueList__: PrimitiveJavascriptType[];
+    declare __classInfo__: ClassInfo;
+    declare __staticAttributeInfoList__: StaticAttributeInfo[];
 }
 
 

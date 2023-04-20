@@ -1,13 +1,7 @@
-import { TokenType, TextPosition } from "../lexer/Token.js";
-import { ArrayType } from "../types/Array.js";
-import { Klass, Interface, TypeVariable } from "../types/Class.js";
-import { Attribute, Method, Parameterlist, Type, Variable, PrimitiveType } from "../types/Types.js";
-import { ClassDeclarationNode, InterfaceDeclarationNode, MethodDeclarationNode, TypeNode, EnumDeclarationNode, TypeParameterNode } from "./AST.js";
+import { TextPosition, TokenType } from "../lexer/Token.js";
+import { TypeNode, TypeParameterNode, ClassDeclarationNode, InterfaceDeclarationNode, EnumDeclarationNode, MethodDeclarationNode } from "./AST.js";
 import { Module, ModuleStore } from "./Module.js";
-import { nullType, intPrimitiveType, booleanPrimitiveType, floatPrimitiveType, doublePrimitiveType, stringPrimitiveType, charPrimitiveType, objectType } from "../types/PrimitiveTypes.js";
-import { Enum } from "../types/Enum.js";
-import { JsonTool } from "../types/TypeTools.js";
-import { MainBase } from "../../main/MainBase.js";
+
 
 type GenericTypeList = { typeNode: TypeNode, module: Module }[];
 
